@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="../../AppData/Roaming/JetBrains/WebStorm2021.1/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.14.0_umd_popper.js"></script>
+</head>
+<body>
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="image/3h-6vLTkjRs.jpg" height="40" width="60"/></a>
+            <a class="navbar-brand" href="index.html" target="_blank">Shell's Company</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About Block</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#slider-section">Slider Block</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form-section">Form Block</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 0" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</header>
+<main>
+    <section class="about-me" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-3">
+                    <img src="image/IMG_20200419_175140.jpg" class="img-fluid" alt="My-photo">
+                </div>
+                <div class="col col-lg-5">
+                    <div class="about-block">
+                        <div class="about-block-text">
+                            <h2>About me</h2>
+                            <p>Hi, I'm Aleksandr Panasiuk, student from KhNURE and NIX Academy.<br> I'm learning IT technology and Front-End/JavaScript.<br> Yahoooo!!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="about-block">
+                        <div class="using-programm">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <img src="image/VS.png" height="30" width="30">
+                                                MS Visual Studio</button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            My first meet with this program happened during my first year of study at the university. This is what I used to write my C++lab papers. Its next use was to write an adaptive client server site in C#
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <img src="image/PCH.png" height="30" width="50">
+                                                PyCharm Studio
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            I used this program to create the first telegram bot. Thanks to this development environment, the creation was fast and convenient
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <img src="image/PBi.png" height="30" width="50"/>
+                                                MS Power Bi
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            The use of this program is related to my thesis work. Thanks to him, I conduct research on the work of one company and create an interactive report
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                                <img src="image/WS.png" height="30" width="30">
+                                            Web Storm
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                        <div class="card-body">
+                                            I need this program to write websites using the HTML markup language. Thanks to it, I can easily and quickly write and debug code right in the development environment
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-3 mx-auto">
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" data-trigger="click" title="Click on the URL" data-bs-content='<a href="small-task.html" target="_blank">Additional page</a>' data-bs-html="true" >Click popper</button></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="photo-galery" id="slider-section">
+        <div class="container">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="image/9fcf7662-f814-431f-82d8-1523baa6f1b6.jpg" class="img-fluid" alt="Alko Ban">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Alko Ban</h3>
+                            <p>Cute tongue's tip</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="image/IMG_20210126_205818.jpg" class="img-fluid" alt="After Party Mood">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>After Party Mood</h3>
+                            <p>His mood of life!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/68744146-4bc2-464f-93a9-fe4a8e87ea0b.jpg" class="img-fluid" alt="The Rider Ban">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>The Rider Ban</h3>
+                            <p>He ride on me!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <section id="form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Connection with me!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6 mx-auto">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Enter your Name</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Ivan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-check">
+                                <p>Choose your favourite game</p>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    CS go
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" >
+                                <label class="form-check-label" for="flexCheckDefault1">
+                                    Dota 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" >
+                                <label class="form-check-label" for="flexCheckDefault2">
+                                    HoS
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" >
+                                <label class="form-check-label" for="flexCheckDefault3">
+                                    I don't play in computer games(
+                                </label>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Enter any file </label>
+                                <input type="file" class="form-control-file w-50" id="exampleFormControlFile1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Tell something about your self)</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter some text" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Send</button>
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Are you agree to send the information?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-success">Yes)</button>
+                                    <button type="button" class="btn btn-warning">No!!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<br><br>
+<!-- Footer -->
+<footer class="bg-primary text-center text-white">
+
+    <div class="container p-4">
+
+        <section class="mb-2">
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/aleksandr_panasiuk_/" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AleksandrPanasiuk" role="button">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://web.telegram.org/#/im?p=@shell_pro" role="button">
+                <i class="fab fa-telegram"></i>
+            </a>
+
+        </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <span id="year"></span> Copyright:Aleksandr Panasiuk
+
+    </div>
+
+</footer>
+
+<script>
+    function getCurrentYear() {
+        return new Date().getFullYear(); // returns the year via local timing
+    }
+
+    document.getElementById("year").innerHTML = getCurrentYear();
+    //changing the inner html of the span with "year" id to the given year(2021)
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="js/js.js"></script>
+<script src="https://kit.fontawesome.com/0c6ba32083.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
