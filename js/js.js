@@ -1,10 +1,3 @@
-window.onscroll = function ()
-{
-    var scroll_height = document.documentElement.scrollHeight;
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var scroll_progress = (scrollTop/scroll_height)*100;
-    $('.progress-bar').css('width', scroll_progress + '%');
-}
 $(function () {
     $('[data-toggle="popover"]').popover({
         'placement': 'right',
@@ -21,7 +14,7 @@ $(function () {
     })
 })
 
-var $page = $('html, body');
+let $page = $('html, body');
 $('a[href*="#"]').click(function() {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top

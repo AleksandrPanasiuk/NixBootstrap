@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/js-style.css">
+
+</head>
+<body>
+<div class="text-box">
+    <div class="text">Lorem ipsum dolor sit amet.</div>
+</div>
+<button class="stop">Stop</button>
+<br><br><br><br>
+
+<div class="vanish" style="display: block">
+    <span class="vanish-text">Lorem ipsum dolor.</span>
+</div>
+<div class="container-link">
+    <a class="vanish-link">Switch vanish</a>
+    <a class="remove-event">Remove event</a>
+</div>
+<br><br><br><br>
+<div class="date-container">
+    <div id="date"></div>
+    <button class="get-day">Get Day</button>
+</div>
+
+<br><br><br><br>
+<div class="list-container">
+    <ul id="list"></ul>
+    <button class="text-to-list">Text to list</button>
+</div>
+
+
+
+
+
+
+
+<script>
+    let text_to_list_button = document.querySelector('.text-to-list')
+    let text_list = document.getElementById('list')
+
+    let user_text
+    text_to_list_button.addEventListener('click',()=>{
+        let user_text_orig = prompt('Enter text, pls')
+        user_text = user_text_orig.split(' ')
+        for(let i = 0; i<user_text.length;i++){
+            let li = document.createElement('li')
+            if(i===0){
+                li.innerHTML = user_text[i].toUpperCase()
+            }
+            else if(i===(user_text.length-2)||i===(user_text.length-1)){
+                li.innerHTML = user_text[i].toLowerCase()
+            }
+            else{
+                li.innerHTML = user_text[i]
+            }
+            text_list.appendChild(li)
+        }
+        console.log(user_text_orig.split('a').length-1)
+    })
+
+
+
+
+
+
+
+    let vanish_link = document.querySelector('.vanish-link')
+    let remove_link = document.querySelector('.remove-event')
+    let vanish = document.querySelector('.vanish')
+    let vanish_text = document.querySelector('.vanish-text')
+    function vanish_unvanish(){
+        if(vanish.style.display === "block"){
+            vanish.style.display = "none"
+            vanish_link.style.border = "2px solid red"
+        }
+        else{
+            vanish.style.display = "block"
+            vanish_text.style.opacity = "1"
+            vanish_link.style.border = "2px solid green"
+        }
+    }
+    function remove_event(){
+        if (confirm("Remove with event?")) {
+            vanish.style.display = "block"
+            vanish_text.style.opacity = "0"
+            vanish_link.removeEventListener('click',vanish_unvanish)
+        } else {
+            vanish.style.display = "block"
+            vanish_text.style.opacity = "0"
+        }
+
+    }
+    vanish_link.addEventListener('click', vanish_unvanish)
+    remove_link.addEventListener('click', remove_event)
+
+
+
+    let date = document.getElementById('date')
+    let get_date_button = document.querySelector('.get-day')
+    get_date_button.addEventListener('click',()=>{
+        let get_date = new Date();
+        let dayWeek = [7, 1, 2, 3, 4, 5, 6][get_date.getDay()];
+        date.innerHTML = "Today is: " + dayWeek
+    })
+
+
+
+    let move_text = document.querySelector('.text')
+    let stop_button = document.querySelector('.stop')
+    let text_box = document.querySelector('.text-box')
+    let rect = document.documentElement.getBoundingClientRect()
+    let counter
+    let different =  parseInt(text_box.style.width.replace(/[^\d]/g, ''))
+
+    function move(){
+        let checker = parseInt(move_text.style.left.replace(/[^\d]/g, ''))
+        if(rect.right!==(checker+different)){
+        let goRight = move_text.offsetLeft;
+        move_text.style.left = goRight + 1 + "px";
+        }
+        else{
+            move_text.style.left = "0px"
+        }
+
+        console.log(checker +"  "+rect.right)
+    }
+
+    move_text.addEventListener('click', function (e){
+        counter = setInterval(move, 100)
+        }
+    );
+    stop_button.addEventListener('click', function (e){
+        clearInterval(counter)
+    });
+
+</script>
+</body>
+</html>

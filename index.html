@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/css.css">
     <script src="../../AppData/Roaming/JetBrains/WebStorm2021.1/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.14.0_umd_popper.js"></script>
+
 </head>
 <body>
 <header class="sticky-top">
@@ -31,6 +32,14 @@
                     <li class="nav-item">
                         <a type="button" class="nav-link" data-toggle="popover" data-trigger="click" title="Click on the URL" data-bs-content='<a href="small-task.html" target="_blank">Additional page</a>' data-bs-html="true" >Click popper</a>
                     </li>
+                    <li class="nav-item light-theme">
+                        <ul class = theme>
+                            <li class="Light">Light</li>
+                            <li class="Dark">Dark</li>
+                        </ul>
+
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -39,7 +48,7 @@
         <div class="progress-bar bg-warning" role="progressbar" style="width: 0" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 </header>
-<main>
+<main class = "main">
     <section class="about-me" id="about-section">
         <div class="container">
             <div class="row">
@@ -122,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </section>
 
@@ -183,78 +192,62 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-lg-6 mx-auto">
-                    <form action="#">
+                    <form action="" onsubmit="return validate()">
                         <fieldset>
                             <div class="form-group">
-                                <label for="exampleInputName1">Enter your Name</label>
-                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Ivan" required>
+                                <label for="InputName1">Enter your Name</label>
+                                <input type="text" class="form-control" id="InputName1" placeholder="Ivan">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <label for="InputEmail1">Email</label>
+                                <input type="email" class="form-control" id="InputEmail1"  aria-describedby="emailHelp" placeholder="Enter email">
                             </div>
                             <div class="form-check">
                                 <p>Choose your favourite game</p>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <input class="form-check-input" type="checkbox" value="CS Go" id="flexCheckDefault" >
                                 <label class="form-check-label" for="flexCheckDefault">
                                     CS go
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" >
+                                <input class="form-check-input" type="checkbox" value="Dota 2" id="flexCheckDefault1" >
                                 <label class="form-check-label" for="flexCheckDefault1">
                                     Dota 2
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" >
+                                <input class="form-check-input" type="checkbox" value="HoS" id="flexCheckDefault2" >
                                 <label class="form-check-label" for="flexCheckDefault2">
                                     HoS
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" >
+                                <input class="form-check-input" type="checkbox" value="Dont play game" id="flexCheckDefault3" >
                                 <label class="form-check-label" for="flexCheckDefault3">
                                     I don't play in computer games(
                                 </label>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Enter any file </label>
-                                <input type="file" class="form-control-file w-50" id="exampleFormControlFile1">
+                                <label for="FormControlFile1">Enter any file </label>
+                                <input type="file" class="form-control-file w-50" id="FormControlFile1">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Tell something about your self)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter some text" required></textarea>
+                                <label for="FormControlTextarea1">Tell something about your self)</label>
+                                <textarea class="form-control" id="FormControlTextarea1" rows="3" placeholder="Enter some text"></textarea>
                             </div>
                             <div class="form-button">
-                                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Send</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"  id = "confirm-form1">Send</button>
                                 <button type="reset" class="btn btn-danger">Clear</button>
                             </div>
                         </fieldset>
                     </form>
-                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Are you agree to send the information?</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-footer justify-content-center">
-                                    <button type="button" class="btn btn-success">Yes)</button>
-                                    <button type="button" class="btn btn-warning">No!!</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-<br><br>
+
 <!-- Footer -->
 <footer class="bg-primary text-center text-white">
 
@@ -279,24 +272,28 @@
 
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         <span id="year"></span> Copyright:Aleksandr Panasiuk
-
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <span id="browser"></span>
+        <span id="version"></span>
     </div>
 
 </footer>
 
 <script>
     function getCurrentYear() {
-        return new Date().getFullYear(); // returns the year via local timing
+        return new Date().getFullYear();
     }
-
     document.getElementById("year").innerHTML = getCurrentYear();
-    //changing the inner html of the span with "year" id to the given year(2021)
+
 </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <script src="js/js.js"></script>
 <script src="https://kit.fontawesome.com/0c6ba32083.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="js/js-homework.js"></script>
 </body>
 </html>

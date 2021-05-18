@@ -1,0 +1,35 @@
+
+body{
+    margin: 0;
+}
+.text-box {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    margin: 0;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    background-color: red;
+}
+
+.vanish{
+
+    background-color: #777476;
+    color: black;
+    width: 300px;
+}
+.vanish-text{
+    opacity: 0;
+}
+.vanish-link{
+    border: 1px solid green;
+    border-radius: 30%;
+}
+.container-link{
+    margin-top: 15px;
+    margin-left: 10px;
+    padding: 5px;
+}
