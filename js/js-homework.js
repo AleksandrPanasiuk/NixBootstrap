@@ -59,7 +59,7 @@ switchTheme.addEventListener('click', e=>{
     }
 })
 
-/*function clickNS(event) {if
+function clickNS(event) {if
 (document||(document.getElementById&&!document.all)) {
     if (event.which===2) {
         return false;}}}
@@ -70,7 +70,7 @@ if (document) {
     document.onmouseup=clickNS;
     document.oncontextmenu=clickIE;
 }
-document.oncontextmenu=new Function("return false")*/
+document.oncontextmenu=new Function("return false")
 
 setInterval(()=>{
     if (confirm("Are you there?")) {
